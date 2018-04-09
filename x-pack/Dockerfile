@@ -46,6 +46,8 @@ RUN set -ex; \
 
 # Install X-Pack plugin
 RUN logstash-plugin install x-pack
+RUN logstash-plugin install logstash-codec-sflow
+RUN logstash-plugin install logstash-codec-netflow
 
 VOLUME ["/etc/logstash/conf.d"]
 
